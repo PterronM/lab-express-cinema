@@ -1,21 +1,29 @@
-<div>
-   
-    <nav id="nav">
-      <a href="/">Home</a>
-      <a href="/movies">All Movies</a>
-    </nav>
+<nav id="nav">
+  <a href="/">Home</a>
+  <a href="/movies">All Movies</a>
+</nav>
 
-    <img src="{{movieId.image}}" alt="" width="100px">
+<div id="container-movies">
+
+  <img src="{{movieId.image}}" alt="" width="300px" />
+
+  <div class = "text-moviesID">
     <h2>{{movieId.title}}</h2>
     <h3>Director:{{movieId.director}}</h3>
 
     <div>
-        <p>Stars</p>
-        <ul>
-            {{#each movieId.stars}}
-                <li>{{this}}</li>
-            {{/each}}
-        </ul>
+      <p>Stars</p>
+      <ul>
+        {{#each movieId.stars}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+    <p>{{movieId.description}}</p>
+    <p>{{movieId.showtimes}}</p>
+
     </div>
+
+  </div>
 
 </div>

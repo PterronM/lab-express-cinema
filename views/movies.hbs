@@ -1,21 +1,21 @@
-<div>
+<nav id="nav">
+  <a href="/">Home</a>
+  <a href="/movies">All Movies</a>
+</nav>
+<div class = "text-movies">
+  {{!-- {{>nav-partial}} --}}
+  <h1>Ironhack Cinema</h1>
+  <h3>Click on the movie to check the showtimes!</h3>
+</div>
 
-    <nav id="nav">
-      <a href="/">Home</a>
-      <a href="/movies">All Movies</a>
-    </nav>
+<div id="container-movies">
 
-    {{!-- {{>nav-partial}} --}}
-    <h1>Ironhack Cinema</h1>
-    <h3>Click on the movie to check the showtimes!</h3>
-
-
-    {{#each allMovies}}
-
-        <img src="{{this.image}}" alt="" width="100px">
-        <p>{{this.title}}</p>
-        <a href="./movies/{{this._id}}">See More</a>
-
-    {{/each}}
+  {{#each allMovies}}
+    <div id="movies">
+      <img src="{{this.image}}" alt="" width="200px" />
+      <p>{{this.title}}</p>
+      <a href="./movies/{{this._id}}">See More</a>
+    </div>
+  {{/each}}
 
 </div>

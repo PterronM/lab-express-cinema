@@ -1,29 +1,47 @@
 body {
   margin: 0px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   /* background-image: url(/images/cinema.jpg);
   background-repeat: no-repeat; */
 }
  
- #index{
-  display: flex;
-  flex-direction: column;
-  /* justify-content:; */
-  width: 100%;
+
+#index {
+  margin-top: -10%;
+  
+  display: block;
+  background: url("../images/cinema.jpg") no-repeat center center fixed; 
+  background-size:contain;  
+  /* background-attachment: fixed; */
   height: 100vh;
-  background-image: url("../images/cinema.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:100%;
-  align-items: center;
-  align-content: center;
- }
+}
+
+#contenido-index{
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 20%;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: end; */
+  width: 30%;
+  /* align-content: flex-end; */
+
+}
+
 #index button{
-  /* width: 10%; */
   padding: 20px;
   border-radius: 45px;
-  /* flex-wrap: nowrap; */
-  
+  border:0
+}
+
+#index button:hover{
+  box-shadow: 10px 10px 20px #b2b8c9, -10px -10px 20px #f0f8ff;
+  font-size: 1.3em; 
+}
+
+#index a{
+  text-decoration: none;
 }
 
 #index h1{
@@ -35,10 +53,49 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #00B7FF;
+  align-items: center;
+  /* background-color: #D63838; */
+  height: 50px;
+  background: rgb(203,17,80);
+  background: linear-gradient(0deg, rgba(203,17,80,1) 27%, rgba(67,103,135,1) 100%);
 }
 #nav a{
   color: white;
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
+
+#container-movies{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 2em;
+  margin-right: 2em;
+  gap:3em;
+  font-size: 1.5em;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+#container-movies a{
+  text-decoration: none;
+  /* text-align: center; */
+}
+
+#container-movies a:hover{
+  color: blue;
+}
+
+.text-movies{
+  font-size: 1.3em;
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+
+.text-moviesID{
+  
+  text-align: left;
+}
 
